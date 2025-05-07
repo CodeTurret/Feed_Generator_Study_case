@@ -17,7 +17,6 @@ public class CertificateUpdateGenerator {
     public Stream<CertificateUpdate> generateQuotes() {
         ThreadLocalRandom random = ThreadLocalRandom.current();
         // TODO: Implement me.
-        // Implement code here
         List<CertificateUpdate> updateList = new ArrayList<CertificateUpdate>();
         for (int i = 0; i < threads * quotes; i++) {
             updateList.add(new CertificateUpdate());
