@@ -1,25 +1,35 @@
 package com.solvians.showcase;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class CertificateUpdate {
 
-    private  long timestamp;
-    private  String isin;
-    private  double bidPrice;
-    private  int bidSize;
-    private  double askPrice;
-    private  int askSize;
-    private  LocalDate maturityDate;
+    private long timestamp;
+    private String isin;
+    private double bidPrice;
+    private int bidSize;
+    private double askPrice;
+    private int askSize;
+    private LocalDate maturityDate;
+
+    public CertificateUpdate(long timestamp, String isin, double bidPrice, int bidSize, double askPrice, int askSize, LocalDate maturityDate) {
+    }
 
 
+    @Override
+    public String toString() {
+        return "CertificateUpdate{" +
+                "timestamp=" + timestamp +
+                ", isin='" + isin + '\'' +
+                ", bidPrice=" + bidPrice +
+                ", bidSize=" + bidSize +
+                ", askPrice=" + askPrice +
+                ", askSize=" + askSize +
+                ", maturityDate=" + maturityDate +
+                '}';
+    }
 }
